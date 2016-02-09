@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div> 
+
+        <form novalidate action="/Account/Login" method="post">
+            @Html.AntiForgeryToken()
+            <input type="email" placeholder="mail" name="Email" value="" />
+            <br />
+            <input type="password" placeholder="pass" name="Password" value="" />
+            <br />
+            <input type="submit" name="name" value="Login" />
+        </form>
+
+        <a href="/Account/FacebookLogin">Facebook</a>
+
+    </div>
+</body>
+</html>
